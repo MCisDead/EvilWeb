@@ -423,9 +423,9 @@ async function GetChatGPT(userMessage) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-        "Authorization": "Bearer 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" 
+                "Authorization": "Bearer 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" 
             },
-    body: JSON.stringify({
+            body: JSON.stringify({
                 model: "gpt-4",
                 messages: [
                     { 
