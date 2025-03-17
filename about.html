@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title> about us </title>
+    
+    <link rel="stylesheet" href="style.css">  
+    <script src="myscript.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik Glitch">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            line-height: 1.6;
+            color: palegoldenrod;
+        }
+
+        .hero {
+            position: relative;
+            height: 500px; /* Adjust as needed */
+            overflow: hidden;
+            text-align: center;
+            color: white;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+
+        .hero .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; /* Adjust width of text content */
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content h2 {
+            margin-bottom: 20px;
+        }
+
+
+
+    </style>
+    
+
+
+  </head>
+  
+  <body>
+
+
+
+    <nav id="indexnavbar" class="navbar">
+        <a href="about.html">about us</a>
+        <a href="tarot.html">about you</a>
+        <a href="index.html"><img id="firewords" src="firewords.gif" alt="Fire Words"></a>
+        <a id="on-capital-punishment" href="capitalpunishment.html">On Capital Punishment</a>
+    </nav>
+
+<!-- popups -->
+
+    <!--<button id="openModal" onclick="openModal()"> Open Modal</button>-->
+
+    <div class="modal" id="modal1">
+        <div class="modal-inner">
+            <h2>Looking for hot single moms in your area?</h2>
+            <p>Check out this big burly man with a huge gyatt.</p>
+            <div class="yo"><img src="cards/single0.jpg" alt="sexy single in your area" id="sexySingle"></div>
+            <button onclick="closeModal(modal1)">No I'm chronically single forever</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal2">
+        <div class="modal-inner">
+            <h2>Are you a sugar baby, dilf daddy, or mommy's boy?</h2>
+            <p>Take this quiz to find your true soulmate</p>
+            <div class="yo"><img src="cards/single1.jpg" alt="sexy single in your area" id="sexySingle"></div>
+            <button onclick="closeModal(modal2)">No, I'll die alone</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal3">
+        <div class="modal-inner">
+            <h2>Hey sexyhotstuff...</h2>
+            <p>Wish you weren't alone and crying yourself to sleep every night in your mom's basement?</p>
+            <div class="yo"><img src="cards/single2.jpg" alt="sexy single in your area" id="sexySingle"></div>
+            <button onclick="closeModal(modal3)">im happy being misrble</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal4">
+        <div class="modal-inner">
+            <h2>Hot Persian ladies in your area are looking for older men</h2>
+            <p>16 are online right now! Don't miss your chance</p>
+            <div class="yo"><img src="cards/single2.jpg" alt="sexy single in your area" id="sexySingle"></div>
+            <button onclick="closeModal(modal4)">No, I'm a homosexual</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal5">
+        <div class="modal-inner">
+            <h2>Are you EVIL >:D</h2>
+            <p><a href="faceClassify.html" id="ee">Scan your face and see if you're the world's next dictator</a></p>
+            <div ><img src="cards/9.png" alt="scan face" ></div>
+            <button onclick="closeModal(modal5)">Ignore ad</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal6">
+        <div class="modal-inner">
+            <h2>Does your fav number worship Satan</h2>
+            <p><a href="evilNumTry.html" id="ee">Find out today</a></p>
+            <div ><img src="cards/evilnum.png" alt="evil num?"></div>
+            <button onclick="closeModal(modal6)">It does and I do too</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal7">
+        <div class="modal-inner">
+            <h2>Magic Number Quiz</h2>
+            <p><a href="evilQuestionnaire.html" id="ee">Who says magic doesnt exist? this quiz magically predicts the number in your mind</a></p>
+            <div ><img src="cards/quiz.png" alt="MAGIC QUIZ?????? " ></div>
+            <button onclick="closeModal(modal7)">Ignore ad</button>
+        </div>
+    </div>
+
+    
+  <div class="modal" id="modal8">
+    <div class="modal-inner">
+        <h2>Wanna Toast Toasts</h2>
+        <p><a href="evilToast.html" id="ee">Click here to play now</a></p>
+        <div ><img src="images/toastevil.jpg" alt="An evil toast" id="sexySingle"></div>
+        <button onclick="closeModal(modal8)">no i want to stay misrble</button>
+    </div>
+</div>
+
+<div class="modal" id="modal9">
+    <div class="modal-inner">
+        <h2>do YOU not have any friends?</h2>
+        <p><a href="evilChatBot.html" id="ee">Talk to our top of the line Ai to forget how no one likes you</a></p>
+        <div ><img src="evilAI2.png" alt="the only person who will tolrate you" ></div>
+        <button onclick="closeModal(modal9)">no trust i have friends (Im lying to myself) </button>
+    </div>
+</div>
+
+
+    <div class="hero">
+        <img src="illuminati.webp" alt="About Us Hero Image" id="shade">
+        <div class="hero-content">
+            <h1>About Our Team</h1>
+            <p>Our team's heart beats with a dark, twisted passion: the utter, unadulterated loathing of plagiarism. We revel in its insidious nature, its soul-crushing theft of intellectual property. We gather to celebrate its vileness, to dissect its depravity, and to revel in the pure, unadulterated evil of those who dare to claim another's work as their own. Join us as we explore the depths of this wicked practice, and bask in the glorious, righteous fury it inspires!</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <br><br>
+        <h2>Truth and lies</h2>
+        <p>We lie to you.  Get used to it.  Of course, we're in good company.  Your parents lie to you to protect you.  Your school lies to you to help you conform.  Your employer lies to you to make you feel appreciated and have good productivity. Your government lies to you so you'll keep them in power. Your friends lie to you so you will like them.  Your lovers lie to you so you won't leave them. 
+            We only lie to you to entertain you.  And of course, because you want us to.</p>
+            <br><br>
+        <h2>Links</h2>
+        <p>We don't show you our links everywhere, only a very few of them.  We hate those ugly blue text runs.  Yes, we know we could make them different colors, but they still stand out against readability.  So we hide them.  And you like it. Because it makes it all like some magical treasure hunt, right? OK, maybe not. But you should know by now that E.C isn't about accessibility or pandering to the stupid.  Pandering... hah!  We're pleased when stupid people walk in and bump their heads and then whine about it.  Maybe they'll get tired and go away.</p>
+        <br><br>
+        <h2>On Flash and other "snazzy" web technologies...</h2>
+        <p>Our website is engineered for two things; quick and universal access.  We regularly test e.c on any number of Internet devices, from weird Mac browsers to hand held wireless browsers.  We want Evil accessible to anyone at any time. Flash is slow and not universal. And frankly, we're sick to death of all the pierced and tattoo'd "web designers" who charge Mr. Dumass big bucks to jam Flash into web pages for dumb stuff like menus and pointless flying animations.  Gag us with a hamster dance.  If you want that kind of crap, head over to disney.com with the rest of your ilk. </p>
+        <br><br>
+        <h2>On Updates</h2>
+        <p>The front page gets updated daily.  Except when we forget.  But when we forget, we make up the date so you'll have to pay attention to catch us forgetting, and when you do we won't really care because we already told you the "truth".
+
+            We update the drooling pages whenever the bucket gets full.  That's usually after a hundred or so "meaningful" entries. OK, maybe after a couple thousand or so entries that we get down to a couple hundred.  Numbers keep going up, we keep getting behind.  It's kid of like the National debt.  Yeah, we answer the drools one at a time, taking no more time to compose our answers than it takes to read the comments.  Oh, you could tell that already?  Good.
+            
+            We update the lies when we feel like it.
+            
+            We don't update the static much.  That's why it's called static. Well, kinda... there's lots of reasons why it's called static, but we're not going to tell you all of them.</p>
+            <br><br>
+        <h2>On law</h2>
+        <p>If you tell us you're doing something illegal and vile, we'll probably forward everything to the FBI.  What could be more evil than that?  Seriously, do you think we're your friends you twisted freak?</p>
+        <br><br>
+        <h2>Politics</h2>
+        <p> We're not political.  Really.  We believe that the worst thing you can be is be identified as a member of one party or the other.  It stratifies you, sets expectations, really diminishes you as a person.  Those who throw themselves into it, Rush comes to mind, are henceforth lessened by association.  So we're sincere when we say that the Republicans are usually hateful, poor spellers and speakers, narrow minded, selfish and judgmental.  But Democrats are reactionary, overly protective, oversexed, whimsical, and generally poor leaders.  The important thing to think about is "who would you rather party with?"  Hey, they're called parties after all! Do remember to vote!</p>
+        <br><br>
+        <h2>why "we get it"</h2>
+        <p> Many sites coddle their visitors, because the bulk of humanity is "not too swift." By now you know this site isn't about coddling anyone. We're happy if you're confused, because dumb folks will get tired and go away.  We get the joke, if you don't get the joke you don't belong here so go away.  Much love, E.</p>
+        <br><br>
+        <h2>Apple Vs. Windows</h2>
+        <p> Get over it.  We will ridicule who and what we want because it deserves it, not because we're fawning fans of Steve or Bill.  Apple folks, you set yourselves up by being ridiculous.  Windows is less exciting than the Mac, but more dependable.  Apple is definitely more sexy, if we're still allowed to say that about technology.   However, defending one or the other like it's some kind of sports team, or worse religion, is simply fodder for our cannon.</p>
+        <br><br>
+    </div>
+
+    <!--<a href="faceClassify.html"><img id="trump" src="DONALDKING.gif" alt="trump face"></a>
+    <img src="button2.png" alt="Button" class="button-img" onclick="openPopup()">-->
+
+
+
+
+
+    <!-- Overlay and Popup -->
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+    <div class="popup" id="popup">
+        <button class="close-btn" onclick="closePopup()">X</button>
+        <video controls>
+            <source src="videoplayback.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+   
+
+  </body>
+  
+  
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title> EVIL </title>
+    
+    <link rel="stylesheet" href="style.css">  
+    <script src="myscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+  </head>
+  
+  <body>
+    <nav class="navbar">
+      <a href="about.html">about us</a>
+      <a href="tarot.html">about you</a>
+      <a href="index.html"><img id="firewords" src="firewords.gif" alt="Fire Words"></a>
+      <a id="on-capital-punishment" href="capitalpunishment.html">On Capital Punishment</a>
+  </nav>
+  
+
+<!-- popups -->
+
+    <!--<button id="openModal" onclick="openModal()"> Open Modal</button>-->
+
+    <div class="modal" id="modal1">
+      <div class="modal-inner">
+          <h2>Looking for single moms in your area?</h2>
+          <p>Check out this big burly man.</p>
+          <div class="yo"><img src="cards/single0.jpg" alt="sexy single in your area" id="sexySingle"></div>
+          <button onclick="closeModal(modal1)">No I'm chronically single forever</button>
+      </div>
+  </div>
+  
+  <div class="modal" id="modal2">
+      <div class="modal-inner">
+          <h2>Are you lonely?</h2>
+          <p>Take this quiz to find your true soulmate</p>
+          <div class="yo"><img src="cards/single1.jpg" alt="sexy single in your area" id="sexySingle"></div>
+          <button onclick="closeModal(modal2)">No, I'll die alone</button>
+      </div>
+  </div>
+  
+  <div class="modal" id="modal3">
+      <div class="modal-inner">
+          <h2>Hey lovely...</h2>
+          <p>Wish you weren't alone and crying yourself to sleep every night in your mom's basement?</p>
+          <div class="yo"><img src="cards/single2.jpg" alt="sexy single in your area" id="sexySingle"></div>
+          <button onclick="closeModal(modal3)">im happy being misrble</button>
+      </div>
+  </div>
+  
+  <div class="modal" id="modal4">
+      <div class="modal-inner">
+          <h2>ladies in your area</h2>
+          <p>Don't miss your chance</p>
+          <div class="yo"><img src="cards/single2.jpg" alt="sexy single in your area" id="sexySingle"></div>
+          <button onclick="closeModal(modal4)">No, I'm a homosexual</button>
+      </div>
+  </div>
+
+  <div class="modal" id="modal5">
+      <div class="modal-inner">
+          <h2>Are you EVIL >:D</h2>
+          <p><a href="faceClassify.html" id="ee">Scan your face and see if you're the world's next dictator</a></p>
+          <div ><img src="cards/9.png" alt="scan face" ></div>
+          <button onclick="closeModal(modal5)">Ignore ad</button>
+      </div>
+  </div>
+
+  <div class="modal" id="modal6">
+      <div class="modal-inner">
+          <h2>Does your fav number worship Satan</h2>
+          <p><a href="evilNumTry.html" id="ee">Find out today</a></p>
+          <div ><img src="cards/evilnum.png" alt="evil num?"></div>
+          <button onclick="closeModal(modal6)">It does and I do too</button>
+      </div>
+  </div>
+
+  <div class="modal" id="modal7">
+      <div class="modal-inner">
+          <h2>Magic Number Quiz</h2>
+          <p><a href="evilQuestionnaire.html" id="ee">Who says magic doesnt exist? this quiz magically predicts the number in your mind</a></p>
+          <div ><img src="cards/quiz.png" alt="MAGIC QUIZ?????? " ></div>
+          <button onclick="closeModal(modal7)">Ignore ad</button>
+      </div>
+  </div>
+
+  <div class="modal" id="modal8">
+    <div class="modal-inner">
+        <h2>Wanna Toast Toasts</h2>
+        <p><a href="evilToast.html" id="ee">Click here to play now</a></p>
+        <div ><img src="images/toastevil.jpg" alt="An evil toast" id="sexySingle"></div>
+        <button onclick="closeModal(modal8)">no i want to stay misrble</button>
+    </div>
+</div>
+
+<div class="modal" id="modal9">
+    <div class="modal-inner">
+        <h2>do YOU not have any friends?</h2>
+        <p><a href="evilChatBot.html" id="ee">Talk to our top of the line Ai to forget how no one likes you</a></p>
+        <div ><img src="evilAI2.png" alt="the only person who will tolrate you" ></div>
+        <button onclick="closeModal(modal9)">no trust i have friends (Im lying to myself) </button>
+    </div>
+</div>
+
+  <h1 >CHECK IF YOU ARE EVIL</h1><br>
+  <a class = "MachineLearning" href="https://colab.research.google.com/drive/1IFFte5E0y65h3dhleMjNZfLqA542L65Z?usp=sharing#scrollTo=B5tzXrGN5yqX">TRY NOW</a>
+  <br><br>
+  <ol>
+    <li>1. Upload the h5 model download here: <a href="EvilModel.h5" download="EvilModel.h5">Download link</a></li>
+    <li>2. Upload image of a face on colab</li>
+    <li>3. Change the "path" to file name</li>
+    <li>4. Run all</li>
+  </ol>
+  
+
+   
+
+  </body>
+  
+</html>

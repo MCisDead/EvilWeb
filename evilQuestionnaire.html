@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title> EVIL QUESTIONNAIRE </title>
+    
+    <link rel="stylesheet" href="style.css">  
+    <script src="myscript.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik Glitch">
+    
+  </head>
+  
+  <body >
+    <nav  class="navbar">
+      <a href="about.html">about us</a>
+      <a href="tarot.html">about you</a>
+      <a href="index.html"><img id="firewords" src="firewords.gif" alt="Fire Words"></a>
+      <a id="on-capital-punishment" href="capitalpunishment.html">On Capital Punishment</a>
+    </nav>
+    
+    <form id="form1" class="numberQuestion">
+        <h1>I will read your mind.</h1>
+        <label for="number">Enter in a number:</label><br>
+        <input type="text" id="numberQ" name="numberQ" placeholder="Enter Number Here...">
+        <button type="button" id="numberSubmit" onclick="processNumber()">Submit</button>
+    </form>
+    
+    <form id="form2" style="display: none;">
+      <h1>I will read your mind.</h1>
+      <p>Is your number greater than -100 but less than a googol?</p>
+      <input type="radio" id="dumbQ1_yes" name="dumbQ1" value="yes">
+      <label for="dumbQ1_yes">Yes</label>
+      <input type="radio" id="dumbQ1_no" name="dumbQ1" value="no">
+      <label for="dumbQ1_no">No</label><br><br>
+  
+      <p>If I say a random number, would yours still exist?</p>
+      <input type="radio" id="dumbQ2_yes" name="dumbQ2" value="yes">
+      <label for="dumbQ2_yes">Yes</label>
+      <input type="radio" id="dumbQ2_no" name="dumbQ2" value="no">
+      <label for="dumbQ2_no">No</label><br><br>
+  
+      <p>Would your number still be your number if it were one less?</p>
+      <input type="radio" id="dumbQ3_yes" name="dumbQ3" value="yes">
+      <label for="dumbQ3_yes">Yes</label>
+      <input type="radio" id="dumbQ3_no" name="dumbQ3" value="no">
+      <label for="dumbQ3_no">No</label><br><br>
+  
+      <p>Is your number the same as itself?</p>
+      <input type="radio" id="dumbQ4_yes" name="dumbQ4" value="yes">
+      <label for="dumbQ4_yes">Yes</label>
+      <input type="radio" id="dumbQ4_no" name="dumbQ4" value="no">
+      <label for="dumbQ4_no">No</label><br><br>
+  
+      <p>If I guessed the wrong number, would that mean your number is not the wrong number?</p>
+      <input type="radio" id="dumbQ5_yes" name="dumbQ5" value="yes">
+      <label for="dumbQ5_yes">Yes</label>
+      <input type="radio" id="dumbQ5_no" name="dumbQ5" value="no">
+      <label for="dumbQ5_no">No</label><br>
+  
+      <button type="button" id="questionSubmit" onclick="processAnswers()">Submit</button>
+  </form>
+    
+    <script>
+        let gInput = "";
+        
+        document.getElementById('form1').addEventListener('submit', function(e) {
+            e.preventDefault();
+        });
+
+        document.getElementById("numberQ").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); 
+                processNumber(); 
+            }
+        });
+    
+        function processNumber() {
+            let input = document.getElementById("numberQ").value;
+            
+            if (isNaN(input) || input.trim() === '') {
+                alert("That's not a number STUPID!!!");
+                document.getElementById("numberQ").value = '';
+            } else {
+                gInput = input;
+                document.getElementById("form1").style.display = "none";
+                document.getElementById("form2").style.display = "block";
+            }
+        }
+        
+        function processAnswers() {
+          const questions = ['dumbQ1', 'dumbQ2', 'dumbQ3', 'dumbQ4', 'dumbQ5'];
+    
+          for (let q of questions) {
+              const selected = document.querySelector(`input[name="${q}"]:checked`);
+              if (!selected) {
+                  alert("Answer all questions you FOOL!!!");
+                  return;
+              }
+          }
+
+          document.getElementById("form2").style.display = "none";
+          const resultDiv = document.createElement('div');
+          resultDiv.className = 'result';
+          resultDiv.innerHTML = `
+              <h2>I guess your number was:</h2><br>
+              <h1>${gInput}</h1>
+              <div class="modal" id="modal1">
+                <div class="modal-inner">
+                    <h2>Looking for hot single moms in your area?</h2>
+                    <p>Check out this big burly man with a huge gyatt.</p>
+                    <div class="yo"><img src="cards/single0.jpg" alt="sexy single in your area" id="sexySingle"></div>
+                    <button onclick="closeModal(modal1)">No I'm chronically single forever</button>
+                  </div>
+                 </div>
+          `;
+          document.body.appendChild(resultDiv);
+        }
+    </script>
+  </body>
+</html>

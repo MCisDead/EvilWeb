@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVIL CHATBOT</title>
+    <link rel="stylesheet" href="style.css">  
+    <script src="myscript.js"></script>
+</head>
+<body id="evilChatbot_body">
+    <nav id="chatbotnav" class="navbar">
+        <a href="about.html">about us</a>
+        <a href="tarot.html">about you</a>
+        <a href="index.html"><img id="firewords" src="firewords.gif" alt="Fire Words"></a>
+        <a id="on-capital-punishment" href="capitalpunishment.html">On Capital Punishment</a>
+    </nav>
+
+    <div class="chat-container" id="chatBotOutput"></div>
+
+    <form id="userMessage">   
+        <div class="inputbox">
+            <textarea id="message" class="input" name="message" rows="4" cols="50" placeholder="Enter a Message"></textarea>
+            <button type="submit" id="aisubmit">Submit</button>
+        </div>   
+    </form>  
+
+    <script>
+        let isProcessing = false;
+        const messageInput = document.getElementById("message");
+        const form = document.getElementById("userMessage");
+        
+        function handleSubmit(event) {
+            event.preventDefault();
+            if (isProcessing) return; 
+            
+            let userMessage = messageInput.value;
+            
+            if (userMessage.trim() !== '') {
+                isProcessing = true;
+            
+                messageInput.disabled = true;
+                document.getElementById("aisubmit").disabled = true;
+                
+                const chatContainer = document.getElementById('chatBotOutput');
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message user-message';
+                messageDiv.innerHTML = `
+                    <div class="message-avatar">
+                        <img src="things/userIcon.jpg" alt="User">
+                    </div>
+                    <div class="message-content">${userMessage}</div>
+                `;
+                chatContainer.appendChild(messageDiv);
+                
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+                
+                GetChatGPT(userMessage).then(() => {
+                    messageInput.disabled = false;
+                    document.getElementById("aisubmit").disabled = false;
+                    messageInput.value = '';
+                    messageInput.focus();
+                    isProcessing = false;
+                });
+            }
+        }
+
+        messageInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                if (!isProcessing) {
+                    handleSubmit(event);
+                }
+            }
+        });
+
+        form.addEventListener("submit", handleSubmit);
+    </script>
+</body>
+</html>

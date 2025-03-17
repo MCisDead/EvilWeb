@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Evil Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- include an external JavaScript file -->
+    <script src="myscript.js"></script>
+    <style>
+        .evil-num-input-container{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1vh;
+            place-items: center;
+
+        }
+
+
+        nav.navbar a {
+            margin: 0 15px; /* Adds spacing between nav links */
+        }
+
+        h2 {
+            margin-top: 20px; /* Adds spacing above the heading */
+        }
+
+        .evil-num-input-container {
+            margin-top: 15px; /* Adds spacing above the input container */
+        }
+
+        #isNumEvilResult {
+            margin-top: 25px; /* Adds spacing above the result display */
+        }
+    </style>
+</head>
+<body id="evil-num-body">
+    <nav id="evil-num-navbar" class="navbar">
+        <a href="about.html">about us</a>
+        <a href="tarot.html">about you</a>
+        <a href="index.html"><img id="firewords" src="firewords.gif" alt="Fire Words"></a>
+        <a id="on-capital-punishment" href="capitalpunishment.html">On Capital Punishment</a>
+    </nav>
+<!-- popups -->
+
+    <!--<button id="openModal" onclick="openModal()"> Open Modal</button>-->
+
+    <div class="modal" id="modal1">
+        <div class="modal-inner">
+            <h2>Looking for hot single moms in your area?</h2>
+            <p>Check out this big burly man with a huge gyatt.</p>
+            <div class="yo"><img src="cards/single0.jpg" alt="sexy single in your area" id="sexySingle"></div>
+            <button onclick="closeModal(modal1)">No I'm chronically single forever</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal2">
+        <div class="modal-inner">
+            <h2>Are you a sugar baby, dilf daddy, or mommy's boy?</h2>
+            <p>Take this quiz to find your true soulmate</p>
+            <div class="yo"><img src="cards/single1.jpg" alt="sexy single in your area" id="sexySingle"></div>
+            <button onclick="closeModal(modal2)">No, I'll die alone</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal3">
+        <div class="modal-inner">
+            <h2>Hey sexyhotstuff...</h2>
+            <p>Wish you weren't alone and crying yourself to sleep every night in your mom's basement?</p>
+            <div class="yo"><img src="cards/single2.jpg" alt="sexy single in your area" id="sexySingle"></div>
+            <button onclick="closeModal(modal3)">im happy being misrble</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal4">
+        <div class="modal-inner">
+            <h2>Hot Persian ladies in your area are looking for older men</h2>
+            <p>16 are online right now! Don't miss your chance</p>
+            <div class="yo"><img src="cards/single2.jpg" alt="sexy single in your area" id="sexySingle"></div>
+            <button onclick="closeModal(modal4)">No, I'm a homosexual</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal5">
+        <div class="modal-inner">
+            <h2>Are you EVIL >:D</h2>
+            <p><a href="faceClassify.html" id="ee">Scan your face and see if you're the world's next dictator</a></p>
+            <div ><img src="cards/9.png" alt="scan face" ></div>
+            <button onclick="closeModal(modal5)">Ignore ad</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal6">
+        <div class="modal-inner">
+            <h2>Does your fav number worship Satan</h2>
+            <p><a href="evilNumTry.html" id="ee">Find out today</a></p>
+            <div ><img src="cards/evilnum.png" alt="evil num?"></div>
+            <button onclick="closeModal(modal6)">It does and I do too</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal7">
+        <div class="modal-inner">
+            <h2>Magic Number Quiz</h2>
+            <p><a href="evilQuestionnaire.html" id="ee">Who says magic doesnt exist? this quiz magically predicts the number in your mind</a></p>
+            <div ><img src="cards/quiz.png" alt="MAGIC QUIZ?????? " ></div>
+            <button onclick="closeModal(modal7)">Ignore ad</button>
+        </div>
+    </div>
+
+    
+  <div class="modal" id="modal8">
+    <div class="modal-inner">
+        <h2>Wanna Toast Toasts</h2>
+        <p><a href="evilToast.html" id="ee">Click here to play now</a></p>
+        <div ><img src="images/toastevil.jpg" alt="An evil toast" id="sexySingle"></div>
+        <button onclick="closeModal(modal8)">no i want to stay misrble</button>
+    </div>
+</div>
+
+<div class="modal" id="modal9">
+    <div class="modal-inner">
+        <h2>do YOU not have any friends?</h2>
+        <p><a href="evilChatBot.html" id="ee">Talk to our top of the line Ai to forget how no one likes you</a></p>
+        <div ><img src="evilAI2.png" alt="the only person who will tolrate you" ></div>
+        <button onclick="closeModal(modal9)">no trust i have friends (Im lying to myself) </button>
+    </div>
+</div>
+
+
+    <h2>Enter a Number</h2>
+
+    <div id="" class="evil-num-input-container">
+        <input id="evil-num-input" type="text" placeholder="Type here...">
+
+            <script>
+                var isNumEvilInput = document.getElementById("evil-num-input");
+                isNumEvilInput.addEventListener("keydown", (event) => {
+                    if (event.key == "Enter") {
+                        console.log("test");
+                        isNumEvil();
+                    } // if
+                });
+            </script>
+    
+        <button onclick="isNumEvil()" id="evil-num-enterbutton">enter</button>
+    </div>
+
+    <div id="isNumEvilResult" class="">Evil</div>
+</body>
+</html>
